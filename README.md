@@ -6,6 +6,8 @@ Lockless Single Producer Single Consumer queue in C
 
 This is a simple C implementation of the lockless SPSC queue, most commonly used for communicating to hard-real-time audio threads.
 
+Documentation can be found here: [splinter.com.au/2026/05/13/lockless-spsc-queue](https://www.splinter.com.au/2026/05/13/lockless-spsc-queue/).
+
 To run, simply do:
 
     make run
