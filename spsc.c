@@ -2,7 +2,14 @@
 #include <stdio.h>
 #include <stdatomic.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include <time.h>
+
+#ifdef __linux__
+// pthread_set_qos_class_self_np() is not a thing in linux
+void pthread_set_qos_class_self_np(int a, int b) {}
+#define QOS_CLASS_USER_INTERACTIVE 0
+#endif
 
 // ------------------
 // Benchmark tracker:
